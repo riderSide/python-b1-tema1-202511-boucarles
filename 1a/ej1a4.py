@@ -34,8 +34,15 @@ Exemple:
 '''
 
 def count_vowels(text_chain:str):
-    # Write here your code
-    pass
+    VOCALS = ["a","e","i","o","u"]
+    count_vocals= 0
+    # convertim la cadena de texte a minuscules
+    text_chain = text_chain.lower()
+
+    for letter in text_chain:
+        if letter in VOCALS:
+            count_vocals += 1
+    return count_vocals
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
