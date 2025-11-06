@@ -32,9 +32,15 @@ Exemple:
 '''
 
 def invert_text(text_chain:str):
-    # Write here your code
-    pass
+    """
+        inverteix un text
+    """
+    inverted_text = ""
+    # fem servir el iterador reversed que simplifica molt la tasca.
+    for letter in reversed(text_chain):
+        inverted_text += letter
+    return inverted_text
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(invert_text("Hello world!"))
+print(invert_text("Hello world!"))
