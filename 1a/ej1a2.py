@@ -41,9 +41,29 @@ Exemple:
 
 '''
 
+def validate_input_numbers(list_numbers):
+    """
+        Valida que tots el nombres de la llista siguin enters positius
+    """
+
+    for number in list_numbers:
+        if not isinstance(number, int):
+            raise ValueError("Error: el valor {number} no es un enter positiu")
+        if number <0:
+            raise ValueError("Error: el valor {number} es negatiu")
+        
+    
 def sum_odd_numbers(list_numbers):
-    # Write here your code
-    pass
+    """
+        Suma els valors senars de una llista de números
+    """
+    validate_input_numbers(list_numbers)
+    result= 0
+    for number in list_numbers:
+        if number %2 != 0:
+            result += number
+    
+    return result
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
